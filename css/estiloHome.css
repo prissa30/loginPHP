@@ -1,0 +1,224 @@
+.navbar navbar {
+
+  }
+
+/*Titulo */
+h2{
+    font-size: 40px;
+    color: #e35688;
+    padding: 1px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    ;
+}
+
+a:link {
+    color: #e35688;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+   }
+
+a {
+    color: #e35688;
+    text-decoration: underline;
+    
+}
+
+
+input[type="submit"]{
+    width: 100%!important;
+    cursor: pointer;  
+    background: #e35688;
+    padding: 10px 5px;
+    color: #fff;
+    font-size: 20px;  
+    border: 6px solid #fff; 
+    margin-bottom: 5px;  
+    
+}    
+
+/*BARRA DE PESQUISA */
+
+ #divBusca{
+    
+    background-color:#ffffff;
+    border:solid 2px #e35688;
+    padding-left:5px;
+    border-radius:10px;
+    height:32px;
+    margin: 0 auto;
+    width: 450px;
+    text-align: center;
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:30px;
+    width:360px;
+    
+  }
+  
+  #btnBusca{
+    border:none;
+    float:right;
+    height:29px;
+    border-radius:0 7px 7px 0;
+    width:70px;
+    color: #fff;
+    background:#e35688;
+  }
+
+  .btn2 {
+    border: none;
+    padding: 10px 25px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight:bold;
+    color: #fff;
+    background:#e35688;
+    
+  }
+    
+
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+  
+/*NAVBAR */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.nav {
+  text-align: center;
+  font-size: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.nav-link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 13px 13px;
+    color: #e35688;
+    margin-right: 5px;
+  }
+  
+  .nav-link:hover {
+    text-decoration:none;
+    background-color: #d0ebff;
+    border-bottom: 2px solid #e35688;
+  }
+  .nav-link.current {
+    border-bottom: 2px solid #e35688;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  @media (min-width: 768px) {
+    .nav {
+      font-size: 1.1rem;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .nav-link {
+      padding: 20px 20px;
+    }
+  
+  }
+
+  /*CARROSEL*/
+
+
+  .container {
+    position: relative;
+    width: 320px;
+    margin: 0px auto 0 auto;
+    perspective: 1000px;
+    text-align: center;
+    
+  }
+  
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; 
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face { 
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  display: flex;
+}
+
+span {
+  margin: auto;
+  font-size: 2rem;
+}
+
+
+.carousel__face:nth-child(1) {
+  background-image: url("https://epocacosmeticos.vteximg.com.br/arquivos/ids/359934/mob-banner-ruby-rose.jpg?v=637068303081130000");
+  transform: rotateY(  0deg) translateZ(430px); }
+.carousel__face:nth-child(2) { 
+  background-image: url("https://blog.superrevendedores.com.br/wp-content/uploads/2020/12/Ruby-Rose-Feels-Linha-Feels.jpg");
+    transform: rotateY( 40deg) translateZ(430px); }
+.carousel__face:nth-child(3) {
+  background-image: url("https://s3.sa-east-1.amazonaws.com/object.belezanaweb.com.br/loucas/wordpress/prod/sites/7/2022/02/17193103/1361x618_22_Banner_Blog_Mascara_em_Promocao.jpg");
+  transform: rotateY( 80deg) translateZ(430px); }
+.carousel__face:nth-child(4) {
+  background-image: url("https://s3.sa-east-1.amazonaws.com/object.belezanaweb.com.br/loucas/wordpress/prod/sites/7/2021/11/09175525/1361x618_21_C16_Banner_Blog_Realce-o-olhar-2.jpg");
+  transform: rotateY(120deg) translateZ(430px); }
+.carousel__face:nth-child(5) { 
+  background-image: url("https://cdn.dooca.store/1928/posts/midias-para-blog-4.png?v=1618662077");
+ transform: rotateY(160deg) translateZ(430px); }
+.carousel__face:nth-child(6) { 
+  background-image: url("https://www.10wallpaper.com/wallpaper/1366x768/1807/Fashion_girl_hairstyle_face_makeup_4K_photo_1366x768.jpg");
+ transform: rotateY(200deg) translateZ(430px); }
+.carousel__face:nth-child(7) { 
+  background-image: url("https://moda20.com.br/wp-content/uploads/2020/05/103889962_1a.jpg");
+ transform: rotateY(240deg) translateZ(430px); }
+.carousel__face:nth-child(8) {
+  background-image: url("https://wallpaperaccess.com/full/695763.jpg");
+  transform: rotateY(280deg) translateZ(430px); }
+.carousel__face:nth-child(9) {
+  background-image: url("https://img.freepik.com/free-photo/different-cosmetics-types-scattered-pink-table_23-2148046961.jpg?w=2000");
+  transform: rotateY(320deg) translateZ(430px); }
+
+
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
