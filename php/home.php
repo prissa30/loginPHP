@@ -26,8 +26,8 @@ if (!isset($_SESSION['loggedin'])) {
   <div>
     <nav class="navbar navbar">
       <div class="container-fluid">
-        <h2>MakeUP</h2>
-        <p>Bem vindo, <?=$_SESSION['name']?>!</p>
+        <h2>MakeUP </h2>
+        <p>Bem vindo, <?=$_SESSION['name']?>!!</p>
         <form class="d-flex">
        
            <a href="logout.php">
