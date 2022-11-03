@@ -46,7 +46,7 @@ if ($stmt = $con->prepare('SELECT id, password, username FROM accounts WHERE ema
         }
     } else {
         // username incorreto
-        echo "<script>alert('Usuário e/ou senha inválido(s), Tente novamente!');</script>";
+        header('Location: login.php?error');
     }
 
 

@@ -27,7 +27,7 @@ if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 }
 
 if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['username']) == 0) {
-    exit('Username mão é valido!');
+    exit('Username não é valido!');
 }
 
 if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
@@ -43,25 +43,17 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 	// Armazene o resultado para que possamos verificar se a conta existe no banco de dados.
 	if ($stmt->num_rows > 0) {
 		// O nome de usuário já existe
-		echo  "<script>alert('Nome de usuario já existe, pfv escolha outro!'); location= '../html/register.html'
+		echo  "<script>alert('Nome de usuario já existe, por favor escolha outro!'); location= '../php/register.php'
 		</script>";
 
 	} else {
 		// O nome de usuário não existe, insira uma nova conta
-if ($stmt = $con->prepare('INSERT INTO accounts (username, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
+	if ($stmt = $con->prepare('INSERT INTO accounts (username, password, email) VALUES (?, ?, ?)')) {
 
 	// // Não queremos expor senhas em nosso banco de dados, então faça um hash da senha e use password_verify quando um usuário fizer login.
 	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-	$uniqid = uniqid();
-	$stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $uniqid);
+	$stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
 	$stmt->execute();
-	$from    = 'noreply@yourdomain.com';
-	$subject = 'Account Activation Required';
-	$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-	// Atualiza a variável de ativação abaixo
-	$activate_link = 'http://yourdomain.com/phplogin/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
-	$message = '<p>Clique no link a seguir para ativar sua conta: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
-	mail($_POST['email'], $subject, $message, $headers);
 	echo  "<script>alert('Usuario cadastrado com sucesso! Pode logar a seguir!'); location= '../php/login.php'
 		</script>";
 } else {
