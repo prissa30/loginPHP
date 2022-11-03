@@ -31,7 +31,7 @@
 				</label>
 				<input type="password" name="password" placeholder="Senha" id="password" required>
 				<input type="submit" value="Login">
-				<p>Não tem uma conta? <a href="../html/register.html" >Cadastre-se agora</a>.</p>
+				<p>Não tem uma conta? <a href="../html/registro.html" >Cadastre-se agora</a>.</p>
 			</form>
 		</div>
 	</body>

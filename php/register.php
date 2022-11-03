@@ -43,7 +43,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 	// Armazene o resultado para que possamos verificar se a conta existe no banco de dados.
 	if ($stmt->num_rows > 0) {
 		// O nome de usuário já existe
-		echo  "<script>alert('Nome de usuario já existe, por favor escolha outro!'); location= '../php/register.php'
+		echo  "<script>alert('Nome de usuario já existe, por favor escolha outro!'); location= '../html/registro.html'
 		</script>";
 
 	} else {
@@ -54,6 +54,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 	$stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
 	$stmt->execute();
+
 	echo  "<script>alert('Usuario cadastrado com sucesso! Pode logar a seguir!'); location= '../php/login.php'
 		</script>";
 } else {
